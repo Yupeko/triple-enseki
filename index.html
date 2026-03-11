@@ -123,17 +123,17 @@
 .hero-cards {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .hero-product-card {
   background: var(--white);
   border: 1.5px solid var(--gray-200);
-  border-radius: 14px;
-  padding: 20px 22px;
+  border-radius: 16px;
+  padding: 26px 28px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
   transition: all 0.25s;
   cursor: pointer;
   text-decoration: none;
@@ -145,15 +145,15 @@
   transform: translateX(4px);
 }
 
-.hero-product-card.blue  { border-left: 4px solid var(--blue); }
-.hero-product-card.green { border-left: 4px solid var(--green); }
-.hero-product-card.yellow { border-left: 4px solid var(--yellow); }
+.hero-product-card.blue  { border-left: 5px solid var(--blue); }
+.hero-product-card.green { border-left: 5px solid var(--green); }
+.hero-product-card.yellow { border-left: 5px solid var(--yellow); }
 
 .hp-icon {
-  width: 48px; height: 48px;
-  border-radius: 12px;
+  width: 64px; height: 64px;
+  border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
+  font-size: 32px;
   flex-shrink: 0;
 }
 
@@ -164,11 +164,11 @@
 .hp-info { flex: 1; }
 
 .hp-no {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .hp-no.blue   { color: var(--blue); }
@@ -176,19 +176,20 @@
 .hp-no.yellow { color: var(--yellow); }
 
 .hp-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--gray-800);
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .hp-sub {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-light);
+  line-height: 1.6;
 }
 
 .hp-arrow {
-  font-size: 18px;
+  font-size: 24px;
   color: var(--gray-400);
   transition: color 0.2s;
 }
