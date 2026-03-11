@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品紹介 | トリプル遠赤冷暖</title>
+<meta name="description" content="冷暖ガラスシールド・冷暖遠赤シールド・輻射冷暖房シアーの3商品の詳細ページ。">
+  <link rel="icon" type="image/x-icon" href="ファビコン.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="ファビコン-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="アップルタッチアイコン.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.trouble-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 48px;
+}
+.trouble-item {
+  padding: 20px 16px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: all 0.22s;
+}
+.trouble-item:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+.trouble-icon { font-size: 26px; display: block; margin-bottom: 8px; }
+.trouble-text { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+
+.product-detail-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 72px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.product-detail-section:last-child { border-bottom: none; }
+.product-detail-section.reverse { direction: rtl; }
+.product-detail-section.reverse > * { direction: ltr; }
+
+.prod-visual {
+  border-radius: 16px;
+  aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 90px;
+  position: relative;
+  overflow: hidden;
+}
+.prod-visual.blue   { background: linear-gradient(135deg, var(--blue-light), #cceeff); }
+.prod-visual.green  { background: linear-gradient(135deg, var(--green-light), #d4f0a0); }
+.prod-visual.yellow { background: linear-gradient(135deg, var(--yellow-light), #fde8b0); }
+
+.prod-visual-num {
+  position: absolute; bottom: 14px; right: 18px;
+  font-size: 64px; font-weight: 800; opacity: 0.08; color: var(--gray-800); line-height: 1;
+}
+
+.prod-no {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.prod-no::after { content: ''; flex:1; height:1.5px; max-width:40px; border-radius:1px; }
+.prod-no.blue  { color: var(--blue); }
+.prod-no.blue::after { background: var(--blue); }
+.prod-no.green { color: var(--green); }
+.prod-no.green::after { background: var(--green); }
+.prod-no.yellow { color: var(--yellow); }
+.prod-no.yellow::after { background: var(--yellow); }
+
+.prod-title { font-family: var(--serif); font-size: clamp(20px,2.5vw,30px); font-weight:700; color:var(--gray-800); line-height:1.4; margin-bottom:6px; }
+.prod-tagline { font-size:14px; font-weight:600; margin-bottom:18px; }
+.prod-tagline.blue   { color: var(--blue); }
+.prod-tagline.green  { color: var(--green); }
+.prod-tagline.yellow { color: var(--yellow); }
+
+.prod-desc { font-size:14px; color:var(--text-mid); line-height:1.9; margin-bottom:24px; }
+
+.spec-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:24px; }
+.spec-item { text-align:center; padding:14px 8px; background:var(--gray-50); border-radius:8px; border:1px solid var(--gray-200); }
+.spec-val { font-size:20px; font-weight:700; display:block; margin-bottom:4px; }
+.spec-val.blue   { color: var(--blue); }
+.spec-val.green  { color: var(--green); }
+.spec-val.yellow { color: var(--yellow); }
+.spec-key { font-size:10px; color:var(--text-light); letter-spacing:0.08em; }
+
+.effect-list { display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
+.effect-item {
+  display:flex; align-items:flex-start; gap:10px;
+  padding:11px 14px; background:var(--gray-50); border-radius:8px;
+  font-size:13px; color:var(--text);
+  border-left:3px solid var(--gray-200);
+}
+.effect-item.blue   { border-left-color: var(--blue); background: var(--blue-light); }
+.effect-item.green  { border-left-color: var(--green); background: var(--green-light); }
+.effect-item.yellow { border-left-color: var(--yellow); background: var(--yellow-light); }
+.effect-icon { flex-shrink:0; }
+</style>
+</head>
+<body>
+<div class="stripe-bar"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="トリプル遠赤冷暖" style="height:48px; width:auto; display:block;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html" class="active">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+    <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label fade-up">Products</div>
+    <h1 class="fade-up-2">3つの商品で構成する<br>トリプル遠赤冷暖システム</h1>
+    <p class="page-hero-desc fade-up-3">窓・内装・輻射冷暖房の3アプローチで、省エネ・快適・健康を同時に実現する複合システムです。</p>
+  </div>
+</section>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">HOME</a><span class="breadcrumb-sep">›</span><span>商品紹介</span></div></div>
+
+<section class="section bg-gray">
+  <div class="section-inner">
+    <div class="section-label">こんなお困りごとはありませんか？</div>
+    <h2 class="section-title">室内環境のお悩みを<br>トリプルで解決します</h2>
+    <div class="trouble-grid">
+      <div class="trouble-item"><span class="trouble-icon">☀️</span><div class="trouble-text">西日が暑くて冷房が効かない</div></div>
+      <div class="trouble-item"><span class="trouble-icon">💧</span><div class="trouble-text">窓・壁の結露とクロスのカビ</div></div>
+      <div class="trouble-item"><span class="trouble-icon">🌡️</span><div class="trouble-text">部屋の温度むらが不快</div></div>
+      <div class="trouble-item"><span class="trouble-icon">🌬️</span><div class="trouble-text">エアコンの乾燥・風が苦手</div></div>
+      <div class="trouble-item"><span class="trouble-icon">💸</span><div class="trouble-text">輻射冷暖房の電気代が高い</div></div>
+      <div class="trouble-item"><span class="trouble-icon">🦠</span><div class="trouble-text">シックハウス・抗菌対策</div></div>
+      <div class="trouble-item"><span class="trouble-icon">🌤️</span><div class="trouble-text">有害な紫外線をカットしたい</div></div>
+      <div class="trouble-item"><span class="trouble-icon">❄️</span><div class="trouble-text">窓際が寒く暖房の効きが悪い</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white">
+  <div class="section-inner">
+
+    <div class="product-detail-section" id="glass">
+      <div class="prod-visual blue">🪟<div class="prod-visual-num">01</div></div>
+      <div>
+        <div class="prod-no blue">Product 01 — Window</div>
+        <div class="prod-title">冷暖ガラスシールド</div>
+        <div class="prod-tagline blue">窓ガラスを内側からローラーで塗布するだけ！</div>
+        <p class="prod-desc">既存の窓ガラスはそのままに、内側からローラーで塗るだけで遮熱・断熱・紫外線カットを実現。大掛かりな工事は不要です。</p>
+        <div class="spec-grid">
+          <div class="spec-item"><span class="spec-val blue">5〜10℃</span><span class="spec-key">太陽直射熱カット</span></div>
+          <div class="spec-item"><span class="spec-val blue">50%+</span><span class="spec-key">結露抑制効果</span></div>
+          <div class="spec-item"><span class="spec-val blue">99%</span><span class="spec-key">紫外線カット</span></div>
+        </div>
+        <div class="effect-list">
+          <div class="effect-item blue"><span class="effect-icon">☀️</span>西日対策・室内温度の上昇を抑制</div>
+          <div class="effect-item blue"><span class="effect-icon">💧</span>結露抑制50%以上・窓側の冷えゾーン解消</div>
+          <div class="effect-item blue"><span class="effect-icon">🌤️</span>有害紫外線を99%カット・家具の日焼け防止</div>
+          <div class="effect-item blue"><span class="effect-icon">💸</span>冷暖房コスト・CO2排出削減</div>
+        </div>
+        <a href="contact.html" class="btn btn-blue">この商品について相談する</a>
+      </div>
+    </div>
+
+    <div class="product-detail-section reverse" id="interior">
+      <div class="prod-visual green">🏠<div class="prod-visual-num">02</div></div>
+      <div>
+        <div class="prod-no green">Product 02 — Interior</div>
+        <div class="prod-title">冷暖遠赤シールド</div>
+        <div class="prod-tagline green">内壁・天井の節電対策と防カビ・不燃対策</div>
+        <p class="prod-desc">内壁全般に断熱・遠赤・恒温付き防カビ塗料及び不燃塗料を塗布し、抗酸化ナノテクコーティングを施すことで、室内断熱と自然派健康塗料のメリットを同時実現。</p>
+        <div class="spec-grid">
+          <div class="spec-item"><span class="spec-val green">断熱+</span><span class="spec-key">遠赤恒温効果</span></div>
+          <div class="spec-item"><span class="spec-val green">防カビ</span><span class="spec-key">抗菌対応</span></div>
+          <div class="spec-item"><span class="spec-val green">自然派</span><span class="spec-key">健康塗料</span></div>
+        </div>
+        <div class="effect-list">
+          <div class="effect-item green"><span class="effect-icon">🌡️</span>室内の温度ムラを解消・均一な快適温度</div>
+          <div class="effect-item green"><span class="effect-icon">🦠</span>防カビ・抗菌・抗ウイルス効果</div>
+          <div class="effect-item green"><span class="effect-icon">🔥</span>不燃塗料対応で安全性も確保</div>
+          <div class="effect-item green"><span class="effect-icon">🍃</span>シックハウス対策・自然派健康塗料使用</div>
+        </div>
+        <a href="contact.html" class="btn btn-green">この商品について相談する</a>
+      </div>
+    </div>
+
+    <div class="product-detail-section" id="thear">
+      <div class="prod-visual yellow">✨<div class="prod-visual-num">03</div></div>
+      <div>
+        <div class="prod-no yellow">Product 03 — Radiation</div>
+        <div class="prod-title">輻射冷暖房 シアー</div>
+        <div class="prod-tagline yellow">快適空間 無風・無音・温度むらなし</div>
+        <p class="prod-desc">特殊アルミパネルによる面放射で業界最速の冷暖機能。無音・無風で温度むらなし。ハウスダスト・アレルゲン微粒子の飛散もゼロです。</p>
+        <div class="spec-grid">
+          <div class="spec-item"><span class="spec-val yellow">無風</span><span class="spec-key">乾燥なし</span></div>
+          <div class="spec-item"><span class="spec-val yellow">無音</span><span class="spec-key">静音運転</span></div>
+          <div class="spec-item"><span class="spec-val yellow">業界最速</span><span class="spec-key">立ち上がり</span></div>
+        </div>
+        <div class="effect-list">
+          <div class="effect-item yellow"><span class="effect-icon">🌬️</span>無風・無音・温度むらなしの快適空間</div>
+          <div class="effect-item yellow"><span class="effect-icon">⚡</span>特殊アルミパネルで業界最速の冷暖</div>
+          <div class="effect-item yellow"><span class="effect-icon">🫁</span>ハウスダスト・アレルゲン飛散ゼロ</div>
+          <div class="effect-item yellow"><span class="effect-icon">💰</span>窓・内装コートとのセットで電気代大幅削減</div>
+        </div>
+        <a href="contact.html" class="btn btn-yellow">この商品について相談する</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%); padding:var(--section-pad); text-align:center;">
+  <div style="position:relative;z-index:1;">
+    <h2 style="font-family:var(--serif);font-size:clamp(22px,3vw,36px);color:white;font-weight:700;margin-bottom:14px;">カタログより体感が早い</h2>
+    <p style="font-size:15px;color:rgba(255,255,255,0.75);max-width:460px;margin:0 auto 36px;line-height:1.85;">全国7拠点のショールームで実際の効果を体感いただけます。</p>
+    <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn" style="background:white;color:var(--blue);font-weight:700;padding:15px 34px;font-size:15px;">📋 お問い合わせ</a>
+      <a href="showroom.html" class="btn" style="background:transparent;color:white;border:2px solid rgba(255,255,255,0.5);padding:15px 34px;font-size:15px;">🏠 ショールーム</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">トリプル遠赤冷暖</div>
+        <p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。</p>
+        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#71181f171e31021a140512195f121e5f1b01"><span class="__cf_email__" data-cfemail="d3babdb5bc93a0b8b6a7b0bbfdb0bcfdb9a3">[email&#160;protected]</span></a></div>
+      </div>
+      <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
+      <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li></ul></div>
+      <div><div class="footer-col-title">お問い合わせ</div><ul class="footer-links"><li><a href="contact.html">お問い合わせ</a></li><li><a href="index.html">HOME</a></li></ul></div>
+    </div

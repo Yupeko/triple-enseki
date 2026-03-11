@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>体感ショールーム | トリプル遠赤冷暖</title>
+<meta name="description" content="全国7拠点のショールームでトリプル遠赤冷暖システムを体感。茨城・東京・埼玉・愛知・大阪・福岡。">
+  <link rel="icon" type="image/x-icon" href="ファビコン.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="ファビコン-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="アップルタッチアイコン.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.showroom-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+
+.sr-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  transition: all 0.28s;
+}
+.sr-card:hover { transform:translateY(-5px); box-shadow:0 16px 44px rgba(0,0,0,0.1); }
+.sr-card:nth-child(3n+1):hover { border-color: var(--blue); }
+.sr-card:nth-child(3n+2):hover { border-color: var(--green); }
+.sr-card:nth-child(3n):hover   { border-color: var(--yellow); }
+
+.sr-top { height:5px; }
+.sr-card:nth-child(3n+1) .sr-top { background: var(--blue); }
+.sr-card:nth-child(3n+2) .sr-top { background: var(--green); }
+.sr-card:nth-child(3n)   .sr-top { background: var(--yellow); }
+
+.sr-photo { height:180px; display:flex; align-items:center; justify-content:center; font-size:56px; position:relative; }
+.sr-card:nth-child(3n+1) .sr-photo { background: var(--blue-light); }
+.sr-card:nth-child(3n+2) .sr-photo { background: var(--green-light); }
+.sr-card:nth-child(3n)   .sr-photo { background: var(--yellow-light); }
+
+.sr-badge {
+  position:absolute; top:12px; left:12px;
+  padding:5px 12px; border-radius:20px;
+  font-size:10px; font-weight:700; letter-spacing:0.1em;
+  color: var(--white);
+}
+.sr-card:nth-child(3n+1) .sr-badge { background: var(--blue); }
+.sr-card:nth-child(3n+2) .sr-badge { background: var(--green); }
+.sr-card:nth-child(3n)   .sr-badge { background: var(--yellow); }
+
+.sr-body { padding:24px; }
+.sr-company { font-family:var(--serif); font-size:16px; font-weight:700; color:var(--gray-800); margin-bottom:14px; line-height:1.4; }
+.sr-row { display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--text-light); line-height:1.6; margin-bottom:8px; }
+.sr-row-icon { flex-shrink:0; }
+
+.sr-btns { display:flex; gap:10px; margin-top:16px; }
+.sr-map-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:500; padding:8px 14px; border-radius:6px;
+  text-decoration:none; transition:all 0.2s;
+  border:1.5px solid var(--blue); color:var(--blue); background:transparent;
+}
+.sr-map-btn:hover { background:var(--blue); color:var(--white); }
+.sr-contact-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:500; padding:8px 14px; border-radius:6px;
+  text-decoration:none; transition:all 0.2s;
+  background:var(--gray-100); color:var(--text-mid);
+}
+.sr-contact-btn:hover { background:var(--gray-200); }
+
+.note-box {
+  background:var(--blue-light); border:1px solid rgba(41,171,226,0.3);
+  border-radius:12px; padding:20px 24px;
+  font-size:13px; color:var(--blue-dark); line-height:1.8;
+  margin-top:40px; display:flex; gap:12px; align-items:flex-start;
+}
+</style>
+</head>
+<body>
+<div class="stripe-bar"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="トリプル遠赤冷暖" style="height:48px; width:auto; display:block;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html" class="active">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+    <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label fade-up">Showroom</div>
+    <h1 class="fade-up-2">全国7拠点で<br>実際の快適さを体感できます</h1>
+    <p class="page-hero-desc fade-up-3">茨城・東京・埼玉・愛知・大阪・福岡のショールームで、無風・無音・快適を実際に体感してください。</p>
+  </div>
+</section>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">HOME</a><span class="breadcrumb-sep">›</span><span>体感ショールーム</span></div></div>
+
+<section class="section bg-white">
+  <div class="section-inner">
+    <div class="section-label green">全国ショールーム</div>
+    <h2 class="section-title">お近くのショールームで<br>トリプル遠赤を体感</h2>
+    <p class="section-lead">訪問前にお問い合わせいただくとよりスムーズです。担当者が丁寧にご案内します。</p>
+
+    <div class="showroom-grid">
+
+      <div class="sr-card" id="ibaraki">
+        <div class="sr-top"></div>
+      <div class="sr-photo">🌿<div class="sr-badge">茨城</div></div>
+        <div class="sr-body">
+          <div class="sr-company">株式会社 ロハスホーム</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒309-1611<br>茨城県笠間市笠間1085</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>0296-73-4062</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=茨城県笠間市笠間1085" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="tokyo">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🏙️<div class="sr-badge">東京（本部）</div></div>
+        <div class="sr-body">
+          <div class="sr-company">協議会本部<br>チャコペーパー会館</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒111-0053<br>東京都台東区浅草橋2-25-10 2F</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>03-5825-6503</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=東京都台東区浅草橋2-25-10" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="tokyo2">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🏛️<div class="sr-badge">東京（文京）</div></div>
+        <div class="sr-body">
+          <div class="sr-company">㈱ シアーコーポレーション</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒112-0002<br>東京都文京区小石川1-4-12<br>文京ガーデン1004</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>03-6802-3912</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=東京都文京区小石川1-4-12" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="saitama">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🌸<div class="sr-badge">埼玉（川口）</div></div>
+        <div class="sr-body">
+          <div class="sr-company">㈱ ジーネクストクリエイト</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒333-0848<br>埼玉県川口市芝下3-32-58</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>048-265-7893</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=埼玉県川口市芝下3-32-58" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="saitama2">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🍀<div class="sr-badge">埼玉（上尾）</div></div>
+        <div class="sr-body">
+          <div class="sr-company">ククリ合同会社</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒362-0073<br>埼玉県上尾市浅間台3-24-5</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>080-6785-2255</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=埼玉県上尾市浅間台3-24-5" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="nagoya">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🏯<div class="sr-badge">愛知</div></div>
+        <div class="sr-body">
+          <div class="sr-company">㈱ ユニハウス</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒489-0983<br>愛知県瀬戸市苗場町21-1</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>0120-887-745</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=愛知県瀬戸市苗場町21-1" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="osaka">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🌆<div class="sr-badge">大阪</div></div>
+        <div class="sr-body">
+          <div class="sr-company">㈱ 浩生</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒569-1147<br>大阪府高槻市土室町34-1</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>072-696-6555</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=大阪府高槻市土室町34-1" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sr-card" id="fukuoka">
+        <div class="sr-top"></div>
+        <div class="sr-photo">🌸<div class="sr-badge">福岡</div></div>
+        <div class="sr-body">
+          <div class="sr-company">㈱ 節電ECOショップ福岡</div>
+          <div class="sr-row"><span class="sr-row-icon">📍</span><span>〒812-0895<br>福岡市博多区竹下5-23-11</span></div>
+          <div class="sr-row"><span class="sr-row-icon">📞</span><span>03-5820-1665</span></div>
+          <div class="sr-btns">
+            <a href="https://maps.google.com/?q=福岡市博多区竹下5-23-11" target="_blank" class="sr-map-btn">🗺️ 地図</a>
+            <a href="contact.html" class="sr-contact-btn">📧 予約・問合せ</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note-box">
+      <span style="font-size:20px;flex-shrink:0;">💡</span>
+      <div>訪問前にお問い合わせいただくとスムーズです。各拠点の担当者がトリプル遠赤冷暖システムの効果をわかりやすくご説明します。<br><strong>体感してから決める</strong>——それが一番の近道です。</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);padding:var(--section-pad);text-align:center;">
+  <h2 style="font-family:var(--serif);font-size:clamp(22px,3vw,36px);color:white;font-weight:700;margin-bottom:14px;">まずはショールームを体感してみませんか？</h2>
+  <p style="font-size:15px;color:rgba(255,255,255,0.8);max-width:460px;margin:0 auto 36px;line-height:1.85;">ご希望のエリア・日程をご連絡ください。最寄りのショールームをご案内します。</p>
+  <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+    <a href="contact.html" class="btn" style="background:white;color:var(--green-dark);font-weight:700;padding:15px 34px;font-size:15px;">📋 ショールーム予約・問い合わせ</a>
+    <a href="download.html" class="btn" style="background:transparent;color:white;border:2px solid rgba(255,255,255,0.5);padding:15px 34px;font-size:15px;">📄 資料をダウンロード</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">トリプル遠赤冷暖</div>
+        <p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p>
+        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#365f58505976455d5342555e185559185c46"><span class="__cf_email__" data-cfemail="deb7b0b8b19eadb5bbaabdb6f0bdb1f0b4ae">[email&#160;protected]</span></a></div>
+      </div>
+      <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
+      <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+      <div><div class="footer-col-title">関連</div><ul class="footer-links"><li><a href="https://www.reidan-meister.net" target="_blank">建物まるごと冷暖</a></li><li><a href="https://www.sketch.co.jp" target="_blank">㈱Sketch</a></li></ul></div>
+    </div

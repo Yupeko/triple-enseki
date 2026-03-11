@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>資料ダウンロード | トリプル遠赤冷暖</title>
+<meta name="description" content="トリプル遠赤冷暖システムの製品カタログを無料ダウンロード。">
+  <link rel="icon" type="image/x-icon" href="ファビコン.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="ファビコン-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="アップルタッチアイコン.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.dl-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:56px; }
+.dl-card { background:var(--white); border:1px solid var(--gray-200); border-radius:16px; overflow:hidden; transition:all 0.28s; }
+.dl-card:hover { transform:translateY(-5px); box-shadow:0 16px 44px rgba(0,0,0,0.1); }
+.dl-top { height:5px; }
+.dl-card.blue  .dl-top { background:var(--blue); }
+.dl-card.green .dl-top { background:var(--green); }
+.dl-card.yellow .dl-top { background:var(--yellow); }
+.dl-cover { height:200px; display:flex; align-items:center; justify-content:center; font-size:70px; position:relative; }
+.dl-card.blue   .dl-cover { background:var(--blue-light); }
+.dl-card.green  .dl-cover { background:var(--green-light); }
+.dl-card.yellow .dl-cover { background:var(--yellow-light); }
+.dl-pdf-badge { position:absolute; top:12px; right:12px; background:rgba(0,0,0,0.12); color:rgba(0,0,0,0.5); font-size:10px; font-weight:700; padding:4px 10px; border-radius:20px; }
+.dl-body { padding:26px; }
+.dl-cat { font-size:10px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; margin-bottom:6px; }
+.dl-card.blue   .dl-cat { color:var(--blue); }
+.dl-card.green  .dl-cat { color:var(--green); }
+.dl-card.yellow .dl-cat { color:var(--yellow); }
+.dl-name { font-family:var(--serif); font-size:17px; font-weight:700; color:var(--gray-800); margin-bottom:10px; line-height:1.4; }
+.dl-desc { font-size:13px; color:var(--text-light); line-height:1.75; margin-bottom:20px; }
+.dl-btn { display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:13px; border-radius:8px; font-size:14px; font-weight:700; text-decoration:none; transition:all 0.22s; }
+.dl-card.blue   .dl-btn { background:var(--blue); color:var(--white); }
+.dl-card.blue   .dl-btn:hover { background:var(--blue-dark); }
+.dl-card.green  .dl-btn { background:var(--green); color:var(--white); }
+.dl-card.green  .dl-btn:hover { background:var(--green-dark); }
+.dl-card.yellow .dl-btn { background:var(--yellow); color:var(--white); }
+.dl-card.yellow .dl-btn:hover { background:var(--yellow-dark); }
+.info-note { background:var(--gray-50); border:1px solid var(--gray-200); border-radius:10px; padding:18px 22px; margin-top:36px; font-size:13px; color:var(--text-mid); line-height:1.8; }
+.info-note a { color:var(--blue); }
+</style>
+</head>
+<body>
+<div class="stripe-bar"></div>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.jpg" alt="トリプル遠赤冷暖" style="height:48px; width:auto; display:block;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html" class="active">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+    <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label fade-up">Download</div>
+    <h1 class="fade-up-2">製品カタログを<br>無料ダウンロード</h1>
+    <p class="page-hero-desc fade-up-3">トリプル遠赤冷暖システムの詳細資料を無料でご用意しています。</p>
+  </div>
+</section>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">HOME</a><span class="breadcrumb-sep">›</span><span>資料ダウンロード</span></div></div>
+
+<section class="section bg-white">
+  <div class="section-inner">
+    <div class="section-label yellow">無料資料</div>
+    <h2 class="section-title">3製品のカタログを<br>無料でダウンロードできます</h2>
+    <div class="dl-grid">
+      <div class="dl-card blue">
+        <div class="dl-top"></div>
+        <div class="dl-cover">🪟<div class="dl-pdf-badge">PDF</div></div>
+        <div class="dl-body">
+          <div class="dl-cat">Window</div>
+          <div class="dl-name">冷暖ガラスシールド 製品カタログ</div>
+          <div class="dl-desc">窓ガラス遮熱断熱コートの仕様・効果・施工方法の詳細資料。</div>
+          <a href="https://www.triple-enseki.net/_files/ugd/2aff1e_361f655a42974da8a229d7b42e00476d.pdf" target="_blank" class="dl-btn">📄 ダウンロード</a>
+        </div>
+      </div>
+      <div class="dl-card green">
+        <div class="dl-top"></div>
+        <div class="dl-cover">🏠<div class="dl-pdf-badge">PDF</div></div>
+        <div class="dl-body">
+          <div class="dl-cat">Interior</div>
+          <div class="dl-name">冷暖遠赤シールド 製品カタログ</div>
+          <div class="dl-desc">内壁・天井断熱＋防カビ塗料の仕様・効果の詳細資料。</div>
+          <a href="https://www.triple-enseki.net/_files/ugd/2aff1e_cf66578c20f049a99e2daf3acb1d7b3a.pdf" target="_blank" class="dl-btn">📄 ダウンロード</a>
+        </div>
+      </div>
+      <div class="dl-card yellow">
+        <div class="dl-top"></div>
+        <div class="dl-cover">✨<div class="dl-pdf-badge">PDF</div></div>
+        <div class="dl-body">
+          <div class="dl-cat">Radiation</div>
+          <div class="dl-name">輻射冷暖房シアー 製品カタログ</div>
+          <div class="dl-desc">無風・無音・輻射冷暖房の仕様・機能・導入事例の詳細資料。</div>
+          <a href="https://www.triple-enseki.net/_files/ugd/2aff1e_b23348d39ae140188ab96e2454aeadf7.pdf" target="_blank" class="dl-btn">📄 ダウンロード</a>
+        </div>
+      </div>
+    </div>
+    <div class="info-note">📌 資料のご利用はすべて無料です。ご不明な点は<a href="contact.html">お問い合わせ</a>ください。より詳しい説明をご希望の方は、全国のショールームでもご案内しています。</div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,var(--yellow) 0%,var(--yellow-dark) 100%);padding:var(--section-pad);text-align:center;">
+  <h2 style="font-family:var(--serif);font-size:clamp(22px,3vw,36px);color:white;font-weight:700;margin-bottom:14px;">資料だけではわからない快適さを体感してください</h2>
+  <p style="font-size:15px;color:rgba(255,255,255,0.85);max-width:460px;margin:0 auto 36px;line-height:1.85;">全国7拠点のショールームで、トリプル遠赤の「無風・無音」を実際に体感いただけます。</p>
+  <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+    <a href="contact.html" class="btn" style="background:white;color:var(--yellow-dark);font-weight:700;padding:15px 34px;font-size:15px;">📋 お問い合わせ</a>
+    <a href="showroom.html" class="btn" style="background:transparent;color:white;border:2px solid rgba(255,255,255,0.5);padding:15px 34px;font-size:15px;">🏠 ショールームを探す</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-brand-name">トリプル遠赤冷暖</div><p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p><div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#bbd2d5ddd4fbc8d0decfd8d395d8d495d1cb"><span class="__cf_email__" data-cfemail="3d54535b527d4e5658495e55135e5213574d">[email&#160;protected]</span></a></div></div>
+      <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
+      <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+      <div><div class="footer-col-title">関連</div><ul class="footer-links"><li><a href="https://www.reidan-meister.net" target="_blank">建物まるごと冷暖</a></li><li><a href="https://www.sketch.co.jp" target="_blank">㈱Sketch</a></li></ul></div>
+    </div
