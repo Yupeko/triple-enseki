@@ -203,7 +203,6 @@
   border-bottom: 1px solid var(--gray-200);
   padding: 44px 48px;
 }
-
 .stats-strip-inner {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -211,9 +210,7 @@
   justify-content: center;
   gap: 64px;
 }
-
 .stat-item { text-align: center; }
-
 .stat-num {
   font-size: 42px;
   font-weight: 700;
@@ -222,11 +219,51 @@
   line-height: 1;
   margin-bottom: 10px;
 }
-
 .stat-label {
   font-size: 14px;
   color: var(--text-light);
   letter-spacing: 0.05em;
+}
+@media (max-width: 768px) {
+  .stats-strip {
+    padding: 0;
+    background: var(--white);
+    border-top: none;
+    border-bottom: none;
+  }
+  .stats-strip-inner {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 100%;
+  }
+  .stat-item {
+    padding: 24px 12px 20px;
+    text-align: center;
+  }
+  .stat-item:nth-child(1) { background: #e8f6fd; border-bottom: 3px solid #29ABE2; }
+  .stat-item:nth-child(2) { background: #f0f8e5; border-bottom: 3px solid #8DC63F; }
+  .stat-item:nth-child(3) { background: #fef3e2; border-bottom: 3px solid #F7941D; }
+  .stat-item:nth-child(4) { background: #e8f6fd; border-bottom: 3px solid #29ABE2; }
+  .stat-item:nth-child(1) .stat-num { color: #29ABE2 !important; }
+  .stat-item:nth-child(2) .stat-num { color: #6fa02e !important; }
+  .stat-item:nth-child(3) .stat-num { color: #d97a0f !important; }
+  .stat-item:nth-child(4) .stat-num { color: #29ABE2 !important; }
+  .stat-num {
+    font-size: 32px !important;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+    white-space: nowrap;
+  }
+  .stat-label {
+    font-size: 11px !important;
+    color: #495057;
+    letter-spacing: 0;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
 }
 
 /* ===== INTRO ===== */
