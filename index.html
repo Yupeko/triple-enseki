@@ -234,12 +234,15 @@
   .stats-strip-inner {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: 10px;
     max-width: 100%;
+    padding: 16px;
+    background: var(--gray-100);
   }
   .stat-item {
     padding: 24px 12px 20px;
     text-align: center;
+    border-radius: 12px;
   }
   .stat-item:nth-child(1) { background: #e8f6fd; border-bottom: 3px solid #29ABE2; }
   .stat-item:nth-child(2) { background: #f0f8e5; border-bottom: 3px solid #8DC63F; }
