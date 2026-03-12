@@ -244,6 +244,13 @@
     display: inline-block;
   }
 
+  /* ===== WHY SECTION モバイル ===== */
+  .why-grid { max-width: 100%; }
+  .why-item { padding: 16px 14px; gap: 14px; }
+  .why-icon-wrap { width: 46px; height: 46px; font-size: 22px; border-radius: 10px; flex-shrink: 0; }
+  .why-title { font-size: 15px; }
+  .why-desc { font-size: 13px; }
+
   .stats-strip {
     padding: 0;
     background: var(--white);
@@ -469,42 +476,71 @@
 .product-card.yellow .product-link { color: var(--yellow); }
 .product-link:hover { gap: 10px; }
 
-/* ===== WHY (light gray bg) ===== */
+/* ===== WHY (縦並びBOX) ===== */
 .why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .why-item {
-  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
   background: var(--white);
   border-radius: 14px;
   border: 1px solid var(--gray-200);
-  text-align: center;
+  border-left: 5px solid var(--blue);
   transition: all 0.25s;
 }
 
+.why-item:nth-child(2) { border-left-color: var(--green); }
+.why-item:nth-child(3) { border-left-color: var(--yellow); }
+.why-item:nth-child(4) { border-left-color: var(--blue); }
+
 .why-item:hover {
-  box-shadow: 0 10px 32px rgba(0,0,0,0.08);
-  transform: translateY(-4px);
-  border-color: var(--blue);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  transform: translateX(4px);
 }
 
+.why-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  background: var(--blue-light);
+}
+.why-item:nth-child(2) .why-icon-wrap { background: var(--green-light); }
+.why-item:nth-child(3) .why-icon-wrap { background: var(--yellow-light); }
+.why-item:nth-child(4) .why-icon-wrap { background: var(--blue-light); }
+
+.why-body { flex: 1; }
+
 .why-no {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--blue);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   display: block;
+  text-transform: uppercase;
 }
+.why-item:nth-child(2) .why-no { color: var(--green-dark); }
+.why-item:nth-child(3) .why-no { color: var(--yellow-dark); }
 
-.why-icon { font-size: 40px; display: block; margin-bottom: 12px; }
+.why-icon { display: none; }
 
-.why-title { font-size: 18px; font-weight: 700; color: var(--gray-800); margin-bottom: 8px; }
-.why-desc { font-size: 13px; color: var(--text-light); line-height: 1.75; }
+.why-title { font-size: 17px; font-weight: 700; color: var(--gray-800); margin-bottom: 4px; }
+.why-desc { font-size: 14px; color: var(--text-light); line-height: 1.7; }
 
 /* ===== SHOWROOM ===== */
 .showroom-preview {
@@ -898,28 +934,36 @@ document.addEventListener('click', (e) => {
     <h2 class="section-title">トリプル遠赤冷暖が<br>選ばれる4つの理由</h2>
     <div class="why-grid">
       <div class="why-item">
-        <span class="why-no">Reason 01</span>
-        <span class="why-icon">🌬️</span>
-        <div class="why-title">無風・無音の快適空間</div>
-        <div class="why-desc">輻射冷暖房の遠赤効果で、乾燥・風・騒音のない上質な環境を実現。</div>
+        <div class="why-icon-wrap">🌬️</div>
+        <div class="why-body">
+          <span class="why-no">Reason 01</span>
+          <div class="why-title">無風・無音の快適空間</div>
+          <div class="why-desc">輻射冷暖房の遠赤効果で、乾燥・風・騒音のない上質な環境を実現。</div>
+        </div>
       </div>
       <div class="why-item">
-        <span class="why-no" style="color:var(--green)">Reason 02</span>
-        <span class="why-icon">⚡</span>
-        <div class="why-title">セット施工で省エネ</div>
-        <div class="why-desc">輻射冷暖房の弱点を窓・内装コートで補完し、電気代削減と快適性を両立。</div>
+        <div class="why-icon-wrap">⚡</div>
+        <div class="why-body">
+          <span class="why-no">Reason 02</span>
+          <div class="why-title">セット施工で省エネ</div>
+          <div class="why-desc">輻射冷暖房の弱点を窓・内装コートで補完し、電気代削減と快適性を両立。</div>
+        </div>
       </div>
       <div class="why-item">
-        <span class="why-no" style="color:var(--yellow)">Reason 03</span>
-        <span class="why-icon">🫁</span>
-        <div class="why-title">健康・衛生環境の向上</div>
-        <div class="why-desc">ハウスダスト飛散なし、防カビ・抗菌・抗ウイルス対応で清潔な室内環境。</div>
+        <div class="why-icon-wrap">🫁</div>
+        <div class="why-body">
+          <span class="why-no">Reason 03</span>
+          <div class="why-title">健康・衛生環境の向上</div>
+          <div class="why-desc">ハウスダスト飛散なし、防カビ・抗菌・抗ウイルス対応で清潔な室内環境。</div>
+        </div>
       </div>
       <div class="why-item">
-        <span class="why-no">Reason 04</span>
-        <span class="why-icon">📍</span>
-        <div class="why-title">全国7拠点で体感可能</div>
-        <div class="why-desc">茨城・東京・埼玉・愛知・大阪・福岡にショールームあり。体感してから検討できます。</div>
+        <div class="why-icon-wrap">📍</div>
+        <div class="why-body">
+          <span class="why-no">Reason 04</span>
+          <div class="why-title">全国7拠点で体感可能</div>
+          <div class="why-desc">茨城・東京・埼玉・愛知・大阪・福岡にショールームあり。体感してから検討できます。</div>
+        </div>
       </div>
     </div>
   </div>
