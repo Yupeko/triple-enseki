@@ -459,22 +459,162 @@ body {
   }
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  z-index: 200;
+}
+.hamburger:hover { background: var(--gray-100); }
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--gray-700);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 150;
+  padding: 16px 20px 24px;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+.mobile-nav.open {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+.mobile-nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-nav ul li a {
+  display: block;
+  padding: 13px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-nav ul li a:hover,
+.mobile-nav ul li a.active { background: var(--blue-light); color: var(--blue); }
+.mobile-nav .mobile-cta {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-100);
+}
+.mobile-nav .mobile-cta a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: var(--blue);
+  color: var(--white) !important;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.mobile-nav .mobile-cta a:hover { background: #1a9fd4 !important; }
+
 @media (max-width: 768px) {
   :root {
-    --section-pad: 56px 20px;
+    --section-pad: 48px 20px;
     --nav-h: 60px;
   }
 
-  /* Nav */
+  /* ===== NAV ===== */
+  .site-nav { padding: 0 16px; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
+  .hamburger { display: flex; }
 
-  /* Section headings */
-  .section-label { font-size: 16px; }
+  /* ===== PAGE HERO (サブページ) ===== */
+  .page-hero { padding: calc(var(--nav-h) + 32px) 20px 40px; }
+  .page-hero h1 { font-size: clamp(22px, 6vw, 32px); }
+  .page-hero-label { font-size: 13px; }
+  .page-hero-desc { font-size: 14px; }
 
-  /* Footer */
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  /* ===== BREADCRUMB ===== */
+  .breadcrumb { padding: 10px 20px; }
+  .breadcrumb-inner { font-size: 13px; }
+
+  /* ===== SECTION HEADINGS ===== */
+  .section-label { font-size: 13px; }
+  .section-title { font-size: clamp(20px, 5.5vw, 28px); }
+  .section-lead { font-size: 14px; }
+
+  /* ===== BUTTONS ===== */
+  .btn { font-size: 14px; padding: 11px 20px; }
+  .btn-lg { font-size: 15px; padding: 13px 24px; }
+
+  /* ===== HERO (index) ===== */
+  .hero { padding: calc(var(--nav-h) + 32px) 20px 48px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-cards { max-width: 100%; }
+  .hero-eyebrow { font-size: 12px; }
+
+  /* ===== STATS STRIP ===== */
+  .stats-strip { padding: 28px 20px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stat-num { font-size: 32px; }
+  .stat-label { font-size: 12px; }
+
+  /* ===== WHY SECTION ===== */
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .why-no { font-size: 11px; }
+  .why-icon { font-size: 32px; }
+  .why-title { font-size: 15px; }
+  .why-desc { font-size: 12px; }
+
+  /* ===== SHOWROOM ===== */
+  .showroom-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section { padding: 48px 20px; }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .cta-buttons .btn { text-align: center; justify-content: center; }
+
+  /* ===== FOOTER ===== */
+  .site-footer { padding: 48px 20px 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; font-size: 13px; }
+  .footer-desc { font-size: 13px; }
+  .footer-contact { font-size: 13px; }
+  .footer-links a { font-size: 13px; }
 }
 
 /* ===== INDEX PAGE RESPONSIVE ===== */

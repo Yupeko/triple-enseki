@@ -70,6 +70,10 @@
   display:flex; align-items:center; justify-content:center; gap:10px;
 }
 .submit-btn:hover { background:var(--blue-dark); transform:translateY(-2px); box-shadow:0 6px 20px rgba(41,171,226,0.3); }
+@media (max-width: 768px) {
+  .contact-info-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
 </style>
 </head>
 <body>
@@ -86,7 +90,26 @@
     <li><a href="about.html">組織概要</a></li>
     <li><a href="contact.html" class="nav-cta-btn active">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+  </ul>
+  <div class="mobile-cta"><a href="contact.html" class="active">お問い合わせ</a></div>
+</div>
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('mobileNav');
+ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+document.addEventListener('click', (e) => { if (!ham.contains(e.target) && !nav.contains(e.target)) { ham.classList.remove('open'); nav.classList.remove('open'); } });
+</script>
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -112,7 +135,7 @@
           <div class="ci-top"></div>
           <span class="ci-icon">📧</span>
           <div class="ci-label">メール</div>
-          <div class="ci-val"><a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></div>
+          <div class="ci-val"><a href="/cdn-cgi/l/email-protection#274e49414867544c4253444f094448094d57"><span class="__cf_email__" data-cfemail="dbb2b5bdb49ba8b0beafb8b3f5b8b4f5b1ab">[email&#160;protected]</span></a></div>
         </div>
         <div class="ci-item">
           <div class="ci-top"></div>
@@ -202,7 +225,6 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-brand-name">トリプル遠赤冷暖</div><p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p><div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></div></div>
+      <div><div class="footer-brand-name">トリプル遠赤冷暖</div><p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p><div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#264f48404966554d4352454e084549084c56"><span class="__cf_email__" data-cfemail="167f78707956657d7362757e387579387c66">[email&#160;protected]</span></a></div></div>
       <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
-      <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
-    
+      <div><div class="footer-col-titl

@@ -73,6 +73,11 @@
 .org-row { display:flex; gap:10px; font-size:12px; margin-bottom:8px; }
 .org-key { color:var(--text-light); min-width:60px; flex-shrink:0; }
 .org-val { color:var(--text-mid); line-height:1.5; }
+@media (max-width: 768px) {
+  .org-main-grid { grid-template-columns: 1fr; gap: 24px; }
+  .staff-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .orgs-grid { grid-template-columns: 1fr; gap: 16px; }
+}
 </style>
 </head>
 <body>
@@ -89,7 +94,26 @@
     <li><a href="about.html" class="active">組織概要</a></li>
     <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html" class="active">組織概要</a></li>
+  </ul>
+  <div class="mobile-cta"><a href="contact.html">お問い合わせ</a></div>
+</div>
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('mobileNav');
+ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+document.addEventListener('click', (e) => { if (!ham.contains(e.target) && !nav.contains(e.target)) { ham.classList.remove('open'); nav.classList.remove('open'); } });
+</script>
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -112,7 +136,7 @@
         <div class="org-main-row"><span class="org-main-key">所在地</span><span class="org-main-val">〒111-0053<br>東京都台東区浅草橋2-25-10<br>チャコペーパー会館 2F</span></div>
         <div class="org-main-row"><span class="org-main-key">電話番号</span><span class="org-main-val">03-5825-6503</span></div>
         <div class="org-main-row"><span class="org-main-key">代表</span><span class="org-main-val">島田靖弘</span></div>
-        <div class="org-main-row"><span class="org-main-key">メール</span><span class="org-main-val"><a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></span></div>
+        <div class="org-main-row"><span class="org-main-key">メール</span><span class="org-main-val"><a href="/cdn-cgi/l/email-protection#6801060e07281b030d1c0b00460b07460218"><span class="__cf_email__" data-cfemail="2d44434b426d5e4648594e45034e4203475d">[email&#160;protected]</span></a></span></div>
         <p class="org-main-desc">トリプル遠赤冷暖システムの開発・普及を推進する本部組織。全国のショールームネットワークを統括しています。</p>
       </div>
       <div>
@@ -169,7 +193,6 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div><div class="footer-brand-name">トリプル遠赤冷暖</div><p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p><div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></div></div>
+      <div><div class="footer-brand-name">トリプル遠赤冷暖</div><p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p><div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#046d6a626b44776f6170676c2a676b2a6e74"><span class="__cf_email__" data-cfemail="046d6a626b44776f6170676c2a676b2a6e74">[email&#160;protected]</span></a></div></div>
       <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
-      <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
-      <div><div
+      <div><div class="footer-col-title">サー�

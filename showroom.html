@@ -71,8 +71,13 @@
   font-size:13px; color:var(--blue-dark); line-height:1.8;
   margin-top:40px; display:flex; gap:12px; align-items:flex-start;
 }
-</style>
-</head>
+@media (max-width: 768px) {
+  .showroom-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+  .sr-body { padding: 18px; }
+  .sr-btns { flex-direction: column; gap: 8px; }
+  .sr-map-btn, .sr-contact-btn { justify-content: center; }
+}
+</style></head>
 <body>
 <div class="stripe-bar"></div>
 <nav class="site-nav">
@@ -87,7 +92,26 @@
     <li><a href="about.html">組織概要</a></li>
     <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html" class="active">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+  </ul>
+  <div class="mobile-cta"><a href="contact.html">お問い合わせ</a></div>
+</div>
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('mobileNav');
+ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+document.addEventListener('click', (e) => { if (!ham.contains(e.target) && !nav.contains(e.target)) { ham.classList.remove('open'); nav.classList.remove('open'); } });
+</script>
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -242,9 +266,8 @@
       <div>
         <div class="footer-brand-name">トリプル遠赤冷暖</div>
         <p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。株式会社スケッチビジネスマネジメント</p>
-        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></div>
+        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#7f161119103f0c141a0b1c17511c1051150f"><span class="__cf_email__" data-cfemail="90f9fef6ffd0e3fbf5e4f3f8bef3ffbefae0">[email&#160;protected]</span></a></div>
       </div>
       <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
       <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
-      <div><div class="footer-col-title">関連</div><ul class="footer-links"><li><a href="https://www.reidan-meister.net" target="_blank">建物まるごと冷暖</a></li><li><a href="https://www.sketch.co.jp" target="_blank">㈱Sketch</a></li></ul></div>
-    </div
+      <div><div class="footer-col-title">関連</div><ul class="footer-links"><li><a href="https://www.reidan-meister.net" target="_bla

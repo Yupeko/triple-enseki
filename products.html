@@ -97,6 +97,16 @@
 .effect-item.green  { border-left-color: var(--green); background: var(--green-light); }
 .effect-item.yellow { border-left-color: var(--yellow); background: var(--yellow-light); }
 .effect-icon { flex-shrink:0; }
+@media (max-width: 768px) {
+  .trouble-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .trouble-text { font-size: 11px; }
+  .product-detail-section { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .product-detail-section.reverse { direction: ltr; }
+  .spec-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .spec-val { font-size: 16px; }
+  .prod-title { font-size: clamp(18px, 5vw, 24px); }
+  .prod-visual { aspect-ratio: 16/9; font-size: 60px; }
+}
 </style>
 </head>
 <body>
@@ -113,7 +123,26 @@
     <li><a href="about.html">組織概要</a></li>
     <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html" class="active">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+  </ul>
+  <div class="mobile-cta"><a href="contact.html">お問い合わせ</a></div>
+</div>
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('mobileNav');
+ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+document.addEventListener('click', (e) => { if (!ham.contains(e.target) && !nav.contains(e.target)) { ham.classList.remove('open'); nav.classList.remove('open'); } });
+</script>
 
 <section class="page-hero">
   <div class="page-hero-inner">
@@ -230,9 +259,8 @@
       <div>
         <div class="footer-brand-name">トリプル遠赤冷暖</div>
         <p class="footer-desc">窓・内装・輻射冷暖房の3つの遠赤効果を組み合わせた次世代システム。</p>
-        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a></div>
+        <div class="footer-contact">〒111-0053 東京都台東区浅草橋2-25-10 2F<br>TEL: <a href="tel:0358256503">03-5825-6503</a>　MAIL: <a href="/cdn-cgi/l/email-protection#96fff8f0f9d6e5fdf3e2f5feb8f5f9b8fce6"><span class="__cf_email__" data-cfemail="422b2c242d0231292736212a6c212d6c2832">[email&#160;protected]</span></a></div>
       </div>
       <div><div class="footer-col-title">製品</div><ul class="footer-links"><li><a href="products.html#glass">冷暖ガラスシールド</a></li><li><a href="products.html#interior">冷暖遠赤シールド</a></li><li><a href="products.html#thear">輻射冷暖房 シアー</a></li></ul></div>
       <div><div class="footer-col-title">サービス</div><ul class="footer-links"><li><a href="showroom.html">ショールーム</a></li><li><a href="download.html">資料DL</a></li><li><a href="about.html">組織概要</a></li></ul></div>
-      <div><div class="footer-col-title">お問い合わせ</div><ul class="footer-links"><li><a href="contact.html">お問い合わせ</a></li><li><a href="index.html">HOME</a></li></ul></div>
-    </div
+      <div><div class="footer-col-title">お問い合わせ</div><ul cla

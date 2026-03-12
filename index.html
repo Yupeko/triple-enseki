@@ -545,6 +545,20 @@
   border: 2px solid rgba(255,255,255,0.5);
 }
 .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
+
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-h1 { font-size: clamp(26px, 7vw, 38px); }
+  .hero-cards { max-width: 100%; }
+  .hero-card { padding: 16px 18px; }
+  .hero-card-icon { font-size: 28px; width: 44px; height: 44px; }
+  .hero-card-name { font-size: 15px; }
+  .hero-card-desc { font-size: 12px; }
+  /* CTA buttons */
+  .cta-buttons { flex-direction: column; align-items: stretch; gap: 10px; padding: 0 4px; }
+  .cta-buttons .btn { text-align: center; justify-content: center; }
+}
 </style>
 </head>
 <body>
@@ -565,7 +579,34 @@
     <li><a href="about.html">組織概要</a></li>
     <li><a href="contact.html" class="nav-cta-btn">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html" class="active">HOME</a></li>
+    <li><a href="products.html">商品紹介</a></li>
+    <li><a href="showroom.html">ショールーム</a></li>
+    <li><a href="download.html">資料DL</a></li>
+    <li><a href="about.html">組織概要</a></li>
+  </ul>
+  <div class="mobile-cta"><a href="contact.html">お問い合わせ</a></div>
+</div>
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('mobileNav');
+ham.addEventListener('click', () => {
+  ham.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!ham.contains(e.target) && !nav.contains(e.target)) {
+    ham.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
+</script>
 
 <!-- HERO -->
 <section class="hero">
@@ -877,7 +918,7 @@
           〒111-0053 東京都台東区浅草橋2-25-10<br>
           チャコペーパー会館 2F<br>
           TEL: <a href="tel:0358256503">03-5825-6503</a><br>
-          MAIL: <a href="mailto:info@sketch.co.jp">info@sketch.co.jp</a>
+          MAIL: <a href="/cdn-cgi/l/email-protection#01686f676e41726a647562692f626e2f6b71"><span class="__cf_email__" data-cfemail="036a6d656c4370686677606b2d606c2d6973">[email&#160;protected]</span></a>
         </div>
       </div>
       <div>
@@ -908,10 +949,4 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 Triple Enseki / 株式会社スケッチビジネスマネジメント. All rights reserved.</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+      <span>&copy; 2025 Triple Enseki /
